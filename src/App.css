@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --text: #303030;
+  --background: #f5f5f0;
+  --primary: #262842;
+  --secondary: #454757;
+  --accent: #ecbc58;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+p, li {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; 
+}
+
+h2 {
+  font-weight: 100;
+}
+
+html {
+  font-size: 14px; 
+}
+
+@media (max-width: 768px) { 
+  html {
+      font-size: 15px; 
+  }
+
+  .page {
+    padding: 2% 5%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 769px) and (max-width: 992px) { 
+  html {
+      font-size: 16px; 
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 993px) and (max-width: 1200px) { 
+  html {
+      font-size: 18px; 
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1201px) { 
+  html {
+      font-size: 20px; 
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+/* COPY AND PASTE */
+@media (max-width: 768px) { 
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) { 
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px) { 
+
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) { 
+
 }
