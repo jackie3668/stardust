@@ -1,10 +1,15 @@
 import React from 'react'
-import Hero from '../../components/Hero/Hero'
+import './Home.css'
 
 const Home = () => {
   return (
-    <div className='page'>
-      <Hero />
+    <div>
+      <div className='hero'>
+        <div className="hero-line"></div>
+        <h3 className='fade-in-1'>Your Destiny Is</h3>
+        <h1 className='fade-in-1'>IN THE STARDUST</h1>
+        <button>GET DAILY HOROSCOPE</button>
+      </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@
   z-index: 999; 
   background-color: transparent;
   color: var(--background);
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .navbar li {
@@ -25,6 +25,7 @@
   .navbar {
     display: flex;
     flex-direction: column;
+    padding: 2% 5%;
   }
 
   .navbar-top {
@@ -85,7 +86,6 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-
   }
 
   .navbar li {

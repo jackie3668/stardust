@@ -19,12 +19,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='page navbar'>
+    <div className='navbar'>
       <div className="navbar-top">
         <h2>Stardust Astrology</h2>
-        <img src={menuHidden && isMobile ? open : close} className={menuHidden ? 'invert' : ''} onClick={() => setMenuHidden(!menuHidden)} alt="" />
+        <img src={isMobile ? (menuHidden ? open : close) : ''} className={menuHidden ? 'invert' : ''} onClick={() => setMenuHidden(!menuHidden)} alt="" />
       </div>
-      <div className={`navbar-items ${menuHidden && isMobile? 'fadeout' : 'fade-in'}`}>
+      <div className={`navbar-items ${isMobile ? (menuHidden ? 'fadeout' : 'fade-in') : ''}`}>
         <ul className={`${isMobile ? (menuHidden ? 'slide-out-blurred-bottom' : 'slide-in-blurred-bottom') : ''}`}>          <li>Home</li>
           <li>About</li>
           <li>Horoscope</li>

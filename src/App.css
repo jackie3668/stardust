@@ -30,6 +30,11 @@ h2 {
   font-weight: 100;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 html {
   font-size: 14px; 
 }
@@ -37,10 +42,6 @@ html {
 @media (max-width: 768px) { 
   html {
       font-size: 15px; 
-  }
-
-  .page {
-    padding: 2% 5%;
   }
 }
 

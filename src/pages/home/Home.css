@@ -1,0 +1,146 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../asset/home/hero20.png');
+  color: var(--background);
+  margin-top: -5rem;
+  text-align: center;
+}
+
+.hero-line {
+  height: 20vh;
+  width: 1px;
+  background-color: var(--background);
+}
+
+.hero h3 {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+.hero h1 {
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.hero button {
+  color: var(--background);
+  border: 1px solid var(--background);
+  z-index: 999;
+  font-weight: 200;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  padding: 2%;
+  border-radius: 100%;
+  max-width: 30%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s ease-in-out;
+}
+
+.hero button:hover {
+  color: var(--text);
+}
+
+.hero button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--background);
+  z-index: -1;
+  transition: 1s;
+  border-radius: 75% 75% 0 0;
+}
+
+.hero button:hover::before {
+  height: 100%;
+}
+
+@media (max-width: 768px) { 
+  .hero {
+    background-position: 50% 0%;
+    background-size: auto 175%; 
+    padding: 15% 15% 10% 15%;
+    gap: 0.25rem;
+  }
+
+  .hero h1 {
+    max-width: 75%;
+  }
+
+  .hero button {
+    margin-top: 2rem;
+    padding: 2%;
+  }
+}
+
+@media (min-width: 769px) { 
+  .hero {
+    padding: 10% 10% 5% 10%;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    background-size: 145% auto; 
+  }
+  
+  .hero button {
+    margin-top: 2rem;
+    padding: 3%;
+  }
+}
+
+@media (min-width: 993px) { 
+  .hero {
+    padding: 10% 10% 5% 10%;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    background-size: 145% auto; 
+  }
+
+  .hero button {
+    margin-top: 2rem;
+    padding: 3%;
+  }
+}
+
+@media (min-width: 1201px) { 
+  .hero {
+    padding: 10% 10% 5% 10%;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    background-size: 125% auto; 
+  }
+
+  .hero button {
+    margin-top: 2rem;
+    padding: 3%;
+  }
+}
+
+.fade-in-1 {
+	-webkit-animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
