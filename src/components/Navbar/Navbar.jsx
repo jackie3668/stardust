@@ -6,12 +6,16 @@ import close from '../../asset/ui/close.png'
 
 const Navbar = () => {
   const [menuHidden, setMenuHidden] = useState(true)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 769)
-
+  const [className1, setClassName1] = useState('hidden')
+  const [className2, setClassName2] = useState('hidden')
   
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 769);
+      if (window.innerWidth > 768) {
+        setMenuHidden(true)
+        setClassName1('hidden')
+        setClassName2('hidden')
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -22,10 +26,19 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="navbar-top">
         <h2>Stardust Astrology</h2>
-        <img src={isMobile ? (menuHidden ? open : close) : ''} className={menuHidden ? 'invert' : ''} onClick={() => setMenuHidden(!menuHidden)} alt="" />
+        <img
+          src={menuHidden ? open : close}
+          className={menuHidden ? 'invert' : ''}
+          onClick={() => {
+            setMenuHidden(!menuHidden);
+            setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+          }}
+          alt=""
+        />
       </div>
-      <div className={`navbar-items ${isMobile ? (menuHidden ? 'fadeout' : 'fade-in') : ''}`}>
-        <ul className={`${isMobile ? (menuHidden ? 'slide-out-blurred-bottom' : 'slide-in-blurred-bottom') : ''}`}>          <li>Home</li>
+      <div className={`navbar-items ${className1}`}>
+        <ul className={`${className2}`}>          <li>Home</li>
           <li>About</li>
           <li>Horoscope</li>
           <li>Blog</li>
