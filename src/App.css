@@ -39,6 +39,26 @@ html {
   font-size: 14px; 
 }
 
+.app {
+  position: relative;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scroll-top img {
+  width: 3rem;
+  transform: rotate(180deg);
+}
+
 @media (max-width: 768px) { 
   html {
       font-size: 15px; 
