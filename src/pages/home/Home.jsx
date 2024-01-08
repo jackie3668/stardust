@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 import star from '../../asset/ui/star (1).png'
 import spot1 from '../../asset/home/spot1.png'
@@ -14,6 +15,15 @@ import step3 from '../../asset/home/eye (1).png'
 import add from '../../asset/ui/add.png'
 import remove from '../../asset/ui/remove.png'
 import diamond from '../../asset/ui/diamond.png'
+import logo from '../../asset/home/Footer.png'
+import discord from '../../asset/home/discord.png'
+import instagram from '../../asset/home/instagram.png'
+import twitter from '../../asset/home/twitter.png'
+import facebook from '../../asset/home/facebook.png'
+import whatsapp from '../../asset/home/whatsapp.png'
+import youtube from '../../asset/home/youtube.png'
+import tiktok from '../../asset/home/tik-tok.png'
+import pinterest from '../../asset/home/pinterest.png'
 
 const Home = () => {
   useEffect(() => {
@@ -60,7 +70,7 @@ const Home = () => {
         <button>GET DAILY HOROSCOPE</button>
       </div>
       <div className="brand-msg">
-        <h1 className='scroll'>Unlocking the <span>Secrets</span>, One <span>Star</span> at a Time</h1>
+        <h1>Unlocking the <span>Secrets</span>, One <span>Star</span> at a Time</h1>
         <div></div>
         <p className='scroll'>A horoscope is an astrological forecast based on the positions of celestial bodies at the time of a person's birth. It offers insights into one's personality traits, tendencies, and potential life events. Horoscopes are commonly used for guidance, self-reflection, and understanding how cosmic influences may impact various aspects of life, such as relationships, career, and personal growth.</p>
       </div>
@@ -115,7 +125,7 @@ const Home = () => {
 
 
       <div className="slider">
-        <div className="slider-arrow"  onClick={() => {setSliderPosition(prev => (prev - 1) % 4)}}>
+        <div className="slider-arrow scroll"  onClick={() => {setSliderPosition(prev => (prev - 1) % 4)}}>
           <img src={left} alt="" />
         </div>
         <div className={`slider-quote ${sliderPosition === 0 ? 'active' :'inactive'}`}>
@@ -134,7 +144,7 @@ const Home = () => {
           <h3>"Accurate and uplifting horoscopes every time. Kudos, Stardust"</h3>
           <p>Emily Davis<img src={star} alt="" /></p>
         </div>
-        <div className="slider-arrow" onClick={() => {setSliderPosition(prev => (prev + 1) % 4)}} >
+        <div className="slider-arrow scroll" onClick={() => {setSliderPosition(prev => (prev + 1) % 4)}} >
           <img src={right} alt="" />
         </div>
       </div>
@@ -142,11 +152,11 @@ const Home = () => {
       <div className='bio-divider'></div>
 
       <div className="bio">
-        <div className='bio-headshot'>
-          <h2>behind the brand</h2>
+        <div className='bio-headshot scroll'>
+          <h2 className='scroll'>behind the brand</h2>
           <img src={headshot} alt="" />
         </div>
-        <div className='bio-text'>
+        <div className='bio-text scroll'>
           <h3>Hi I am Jasmine Lee.</h3>
           <p>Jasmine, a gifted astrologist, illuminates life's mysteries through celestial insights. Her passion for astrology has guided countless souls on their journeys.</p>
           <button>BOOK NOW</button>
@@ -154,20 +164,20 @@ const Home = () => {
       </div>
 
       <div className='steps'>
-        <h1>Getting <span>Started</span></h1>
-        <div className="steps-wrapper">
+        <h1 className='scroll'>Getting <span>Started</span></h1>
+        <div className="steps-wrapper scroll">
           <img src={step1} alt="" />
           <h3>Choose Your Service</h3>
           <div className='divider'></div>
           <p>Select the service that suits you best: Birth Chart Reading, Relationship Insights, or Cosmic Coaching.</p>
         </div>
-        <div className="steps-wrapper">
+        <div className="steps-wrapper scroll">
           <img src={step2} alt="" />
           <h3>Book Your Session</h3>
           <div className='divider'></div>
           <p>Select the service that suits you best: Birth Chart Reading, Relationship Insights, or Cosmic Coaching.</p>
         </div>
-        <div className="steps-wrapper">
+        <div className="steps-wrapper scroll">
           <img src={step3} alt="" />
           <h3>Receive Your Guidance</h3>
           <div className='divider'></div>
@@ -175,7 +185,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="faq">
+      <div className="faq scroll">
         <h1>FAQ</h1>
         <div className="faq-container">
           <div className="faq-wrapper">
@@ -210,7 +220,69 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="footer"></div>
+      <div className='footer'>
+        <div className="footer-top">
+          <div className="footer-logo footer-section">
+            <h2>Stardust Astrology <img src={star} alt="" /></h2>
+          </div>
+          <div className="footer-section">
+            <h3>Information</h3>
+            <ul>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>HOME</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>ABOUT</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>FAQ</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>BLOG</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>CONTACT</Link></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h3>The Shop</h3>
+            <ul>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>SHOP</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>PRIVACY POLICY</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>SHIPPING POLICY</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>REFUND POLICY</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>TERMS OF SERVICE</Link></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h3>Stardust</h3>
+            <p>Explore the cosmos of your destiny with Stardust: Your personal guide to the stars and horoscopes!</p>
+          </div>
+        </div>
+        <div className="footer-bot">
+          <div className='divider'></div>
+          <div className="footer-bot-socials">
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+              <img src={discord} alt="Discord Icon" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={instagram} alt="Instagram Icon" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src={twitter} alt="Twitter Icon" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src={facebook} alt="Facebook Icon" />
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
+              <img src={whatsapp} alt="WhatsApp Icon" />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <img src={youtube} alt="YouTube Icon" />
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <img src={tiktok} alt="TikTok Icon" />
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+              <img src={pinterest} alt="Pinterest Icon" />
+            </a>
+          </div>
+          <div className="footer-bot-copyright">
+          &copy; 2024 Stardust. All Rights Reserved.
+          </div>
+        </div>
+    </div>
 
     </div>
   )

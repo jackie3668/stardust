@@ -43,6 +43,10 @@ html {
   position: relative;
 }
 
+a {
+  color: inherit;
+}
+
 .scroll-top {
   position: fixed;
   bottom: 1rem;
