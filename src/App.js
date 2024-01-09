@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Navbar from './components/Navbar/Navbar';
 import arrow from './asset/ui/down-arrow.png'
+import Horoscope from './pages/horoscope/Horoscope';
+
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
           })}} alt="" />
         </div>
         <Navbar />
-        <Home />
         <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/daily-horoscope' element={<Horoscope />} />
         </Routes>
       </div>
     </Router>

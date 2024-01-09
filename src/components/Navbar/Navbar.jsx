@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 import open from '../../asset/ui/hamburger.png'
 import close from '../../asset/ui/close.png'
@@ -38,9 +39,10 @@ const Navbar = () => {
         />
       </div>
       <div className={`navbar-items ${className1}`}>
-        <ul className={`${className2}`}>          <li>Home</li>
+        <ul className={`${className2}`}>          
+          <li>Home</li>
           <li>About</li>
-          <li>Horoscope</li>
+          <li><Link to='/daily-horoscope'>Horoscope</Link></li>
           <li>Blog</li>
           <li>Contact</li>
           <li>Support Us</li>
