@@ -1,4 +1,65 @@
-button {
-  background-color: rebeccapurple;
+.horoscope {
+  background-color: var(--primary);
+  margin-top: -5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.horoscope-banner {
+  background-image: url('../../asset/horoscope/banner.png');
+  height: 30vh;
+  background-position: 50% 30%;
+  background-size: 100%;
+}
+
+.horoscope-day {
+  padding: 5% 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.horoscope-day button {
+  background-color: transparent;
+  color: var(--background);
+  border: 1px solid var(--background);
+  padding: 2%;
+  width: 30%;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.horoscope-day button:hover {
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+.horoscope-signs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  color: var(--background);
+}
+
+.horoscope-signs div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.horoscope-signs img {
+  width: 5rem;
+  filter: invert(1);
+}
+
+.horoscope-signs button {
+  color: var(--background);
+  border: 1px solid var(--background);
+  cursor: pointer;
+  border: none;
 }

@@ -40,9 +40,19 @@ const Navbar = () => {
       </div>
       <div className={`navbar-items ${className1}`}>
         <ul className={`${className2}`}>          
-          <li>Home</li>
+          <li><Link to='/' onClick={() => {
+            window.scrollTo(0,0);
+            setMenuHidden(true);
+            setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+          }}>Home</Link></li>
           <li>About</li>
-          <li><Link to='/daily-horoscope'>Horoscope</Link></li>
+          <li><Link to='/daily-horoscope' onClick={() => {
+            window.scrollTo(0,0);
+            setMenuHidden(true);
+            setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+          }}>Horoscope</Link></li>
           <li>Blog</li>
           <li>Contact</li>
           <li>Support Us</li>
