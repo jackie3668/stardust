@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 import './Horoscope.css'
-import aries from '../../asset/ui/zodiac/aries.png'
+import period from '../../asset/ui/period.png'
+
 const Horoscope= () => {
   const [dailyHoroscope, setDailyHoroscope] = useState({});
   const [sign, setSign] = useState('Aries');
-  const [offset, setOffset] = useState(2)
-
+  const [offset, setOffset] = useState(0)
 
   useEffect(() => {
     handleGetDailyHoroscope(0)
-  }, [setOffset, offset])
+  }, [setOffset, offset, setSign, sign])
 
   const handleGetDailyHoroscope = async () => {
     console.log('pressed');
@@ -40,31 +41,48 @@ const Horoscope= () => {
     <div className='horoscope'>
       <div className="horoscope-banner">
       </div>
-      <div className="horoscope-generator">
+      <div className="horoscope-generator fade-in-1">
         <div className='horoscope-day'>
-          <button onClick={()=> {setOffset(-1)}}>Yesterday</button>
-          <button onClick={()=> {setOffset(0)}}>Today</button>
-          <button onClick={()=> {setOffset(1)}}>Tomorrow</button>
+          <button onClick={()=> {setOffset(-1)}} className={offset === -1 ? 'active' : ''}>Yesterday</button>
+          <button onClick={()=> {setOffset(0)}} className={offset === 0 ? 'active' : ''}>Today</button>
+          <button onClick={()=> {setOffset(1)}} className={offset === 1 ? 'active' : ''}>Tomorrow</button>
         </div>
         <div className="horoscope-signs">
-          <div>
-            <img src={aries} alt="" />
-            <p>{dailyHoroscope['Aries']}</p>
+          <div className="horoscope-signs-buttons">
+            {[
+              'Aries',
+              'Taurus',
+              'Gemini',
+              'Cancer',
+              'Leo',
+              'Virgo',
+              'Libra',
+              'Scorpio',
+              'Sagittarius',
+              'Capricorn',
+              'Aquarius',
+              'Pisces',
+            ].map((signOption) => (
+              <button
+                key={signOption}
+                className={sign === signOption ? 'active' : ''}
+                onClick={() => setSign(signOption)}
+              >
+                {signOption}
+              </button>
+            ))}
           </div>
-          <button>Aries</button>
-          <button>Taurus</button>
-          <button>Gemini</button>
-          <button>Cancer</button>
-          <button>Leo</button>
-          <button>Virgo</button>
-          <button>Libra</button>
-          <button>Scorpio</button>
-          <button>Sagittarius</button>
-          <button>Capricorn</button>
-          <button>Aquarius</button>
-          <button>Pisces</button>
         </div>
+
+      {dailyHoroscope[sign] && (
+        <div key={`${offset}-${sign}`} className='horoscope-text fade-in-2'>
+          <h3><img src={period} alt="" />    {new Date(new Date().getTime() + offset * 24 * 60 * 60 * 1000).toDateString()}<img src={period} alt="" /></h3>
+          <h2><img src={require(`../../asset/ui/zodiac/${sign.toLowerCase()}.png`)} alt={sign} />{sign}:&nbsp; <span>April 04-April 28</span></h2>
+          <p>{dailyHoroscope[sign]}</p>
+        </div>
+      )}
       </div>
+      <div className='back'  onClick={() => window.scrollTo(0, 0)}><Link to='/'>&lt;  &nbsp; Back</Link></div>
     </div>
   );
 }

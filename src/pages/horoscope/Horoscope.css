@@ -1,15 +1,20 @@
 .horoscope {
-  background-color: var(--primary);
+  background-color: var(--background);
   margin-top: -5rem;
   display: flex;
   flex-direction: column;
 }
 
+.horoscope-generator {
+  padding: 10% 0;
+}
+
 .horoscope-banner {
   background-image: url('../../asset/horoscope/banner.png');
   height: 30vh;
-  background-position: 50% 30%;
+  background-position: 50% 38%;
   background-size: 100%;
+  z-index: 0;
 }
 
 .horoscope-day {
@@ -21,45 +26,144 @@
 
 .horoscope-day button {
   background-color: transparent;
-  color: var(--background);
-  border: 1px solid var(--background);
+  color: var(--text);
+  border: 1px solid var(--text);
   padding: 2%;
   width: 30%;
   border-radius: 40px;
   font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
 
+.horoscope-day button.active,
 .horoscope-day button:hover {
-  background-color: var(--background);
+  background-color: var(--secondary-accent);
   color: var(--primary);
 }
 
 .horoscope-signs {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  color: var(--background);
-}
-
-.horoscope-signs div {
+  width: 100%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  overflow: hidden;
 }
 
-.horoscope-signs img {
-  width: 5rem;
-  filter: invert(1);
+.horoscope-signs-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  background-color: var(--background);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8) inset;
 }
 
-.horoscope-signs button {
-  color: var(--background);
-  border: 1px solid var(--background);
+.horoscope-signs-buttons button {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 2rem;
+  background-color: var(--background);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  border: none;
+}
+
+
+.horoscope-signs-buttons button.active {
+  background-color: var(--secondary-accent);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.horoscope-signs-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.horoscope-signs-arrows img {
+  width: 2rem;
+}
+
+.horoscope-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  gap: 1rem;
+  text-align: center;
+}
+
+.horoscope-text h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.horoscope-text h3 img {
+  width: 1.5rem;
+}
+
+.horoscope-text h2 {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.horoscope-text h2 img {
+  width: 2rem;
+}
+
+.horoscope-text p {
+  padding: 0 5%;
+  line-height: 200%;
+  height: 15rem;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-bottom: 10%;
+  cursor: pointer;
+}
+
+.fade-in-2 {
+	-webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@media (max-width: 768px) { 
+
+}
+
+@media (min-width: 769px)  { 
+  .horoscope-generator {
+    padding: 5% 10%;
+  }
+}
+
+@media (min-width: 993px) {
+  .horoscope-generator {
+    padding: 5% 15%;
+  }
+}
+
+@media (min-width: 1201px) { 
+  .horoscope-generator {
+    padding: 3% 15%;
+  }
 }

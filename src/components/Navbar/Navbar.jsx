@@ -9,7 +9,25 @@ const Navbar = () => {
   const [menuHidden, setMenuHidden] = useState(true)
   const [className1, setClassName1] = useState('hidden')
   const [className2, setClassName2] = useState('hidden')
+
+  useEffect(() => {
+    let timeoutId;
   
+    if (window.innerWidth <= 768) {
+      if (menuHidden) {
+        timeoutId = setTimeout(() => {
+          document.querySelector('.navbar-items').style.zIndex = -1;
+        }, 200); 
+      } else {
+        clearTimeout(timeoutId);
+        document.querySelector('.navbar-items').style.zIndex = 999; 
+      }
+    }
+  
+    return () => clearTimeout(timeoutId);
+  }, [menuHidden]);
+  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -54,7 +72,15 @@ const Navbar = () => {
             setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
           }}>Horoscope</Link></li>
           <li>Blog</li>
-          <li>Contact</li>
+          <li>
+            <Link to='/contact' onClick={() => {
+              window.scrollTo(0, 0);
+              setMenuHidden(true);
+              setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`);
+              setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`);
+            }}>Contact</Link>
+          </li>
+
           <li>Support Us</li>
         </ul>
       </div>

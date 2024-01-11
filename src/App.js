@@ -4,6 +4,8 @@ import Home from './pages/home/Home';
 import Navbar from './components/Navbar/Navbar';
 import arrow from './asset/ui/down-arrow.png'
 import Horoscope from './pages/horoscope/Horoscope';
+import Footer from './components/Footer/Footer';
+import Contact from './pages/contact/Contact';
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/daily-horoscope' element={<Horoscope />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
