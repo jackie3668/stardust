@@ -6,6 +6,7 @@ import arrow from './asset/ui/down-arrow.png'
 import Horoscope from './pages/horoscope/Horoscope';
 import Footer from './components/Footer/Footer';
 import Contact from './pages/contact/Contact';
+import About from './pages/about/About';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/daily-horoscope' element={<Horoscope />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
       </div>

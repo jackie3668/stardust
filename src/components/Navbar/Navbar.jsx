@@ -64,7 +64,12 @@ const Navbar = () => {
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
             setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
           }}>Home</Link></li>
-          <li>About</li>
+          <li><Link to='/about' onClick={() => {
+            window.scrollTo(0,0);
+            setMenuHidden(true);
+            setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+          }}>About</Link></li>
           <li><Link to='/daily-horoscope' onClick={() => {
             window.scrollTo(0,0);
             setMenuHidden(true);
