@@ -51,7 +51,7 @@ const Navbar = () => {
           onClick={() => {
             setMenuHidden(!menuHidden);
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
-            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); 
           }}
           alt=""
         />
@@ -62,13 +62,13 @@ const Navbar = () => {
             window.scrollTo(0,0);
             setMenuHidden(true);
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
-            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); 
           }}>Home</Link></li>
           <li><Link to='/daily-horoscope' onClick={() => {
             window.scrollTo(0,0);
             setMenuHidden(true);
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
-            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
+            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); 
           }}>Horoscope</Link></li>
           <li>
             <Link to='/contact' onClick={() => {
