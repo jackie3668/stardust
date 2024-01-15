@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/stardust/static/css/main.66446d11.css",
+    "main.js": "/stardust/static/js/main.e9fe8bdb.js",
+    "static/media/slider.png": "/stardust/static/media/slider.9be7fab50f6f0f40fd1c.png",
+    "static/media/hero20.png": "/stardust/static/media/hero20.b25ae45da896d98f906c.png",
+    "static/media/spot2.png": "/stardust/static/media/spot2.da545650012302034173.png",
+    "static/media/spot1.png": "/stardust/static/media/spot1.46230503d4e84739a839.png",
+    "static/media/banner-11.png": "/stardust/static/media/banner-11.d8e50841ba21272edf60.png",
+    "static/media/headshot.png": "/stardust/static/media/headshot.9a1ec9cf5e927fefb36a.png",
+    "static/media/spot3.png": "/stardust/static/media/spot3.ecfce2effe2dff16b218.png",
+    "static/media/horoscope (1).png": "/stardust/static/media/horoscope (1).950933c69d39e6ba3cc2.png",
+    "static/media/eye (1).png": "/stardust/static/media/eye (1).817393a8a1d6dff59dd0.png",
+    "static/media/diamond.png": "/stardust/static/media/diamond.4433b35210552404f32a.png",
+    "static/media/pinterest.png": "/stardust/static/media/pinterest.888861bb9a699764c1ae.png",
+    "static/media/whatsapp.png": "/stardust/static/media/whatsapp.7890ebb1991ceea33054.png",
+    "static/media/instagram.png": "/stardust/static/media/instagram.b691a9313791ac3058c8.png",
+    "static/media/ball.png": "/stardust/static/media/ball.07857c16bda7d61d313e.png",
+    "static/media/star (1).png": "/stardust/static/media/star (1).2a4f524ff90e851133d1.png",
+    "static/media/cancer.png": "/stardust/static/media/cancer.a6282585b1512298b401.png",
+    "static/media/leo.png": "/stardust/static/media/leo.96947a54a4d2899f31e8.png",
+    "static/media/aries.png": "/stardust/static/media/aries.fb723b836fcf794b3a7a.png",
+    "static/media/aquarius.png": "/stardust/static/media/aquarius.22051c619ed3d4a87cf6.png",
+    "static/media/twitter.png": "/stardust/static/media/twitter.60598133e948f3e36f70.png",
+    "static/media/discord.png": "/stardust/static/media/discord.8eecbd78630176c784e8.png",
+    "static/media/facebook.png": "/stardust/static/media/facebook.11847e03ada611eb2580.png",
+    "static/media/taurus.png": "/stardust/static/media/taurus.a252aa626902b14e5b19.png",
+    "static/media/pisces.png": "/stardust/static/media/pisces.61725bb4a19850794638.png",
+    "static/media/libra.png": "/stardust/static/media/libra.6eba94c632f46439c520.png",
+    "static/media/capricorn.png": "/stardust/static/media/capricorn.1abc502295f576de8532.png",
+    "index.html": "/stardust/index.html",
+    "main.66446d11.css.map": "/stardust/static/css/main.66446d11.css.map",
+    "main.e9fe8bdb.js.map": "/stardust/static/js/main.e9fe8bdb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66446d11.css",
+    "static/js/main.e9fe8bdb.js"
+  ]
+}
