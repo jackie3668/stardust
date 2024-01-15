@@ -64,19 +64,12 @@ const Navbar = () => {
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
             setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
           }}>Home</Link></li>
-          <li><Link to='/about' onClick={() => {
-            window.scrollTo(0,0);
-            setMenuHidden(true);
-            setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
-            setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
-          }}>About</Link></li>
           <li><Link to='/daily-horoscope' onClick={() => {
             window.scrollTo(0,0);
             setMenuHidden(true);
             setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`); 
             setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`); // Use backticks here
           }}>Horoscope</Link></li>
-          <li>Blog</li>
           <li>
             <Link to='/contact' onClick={() => {
               window.scrollTo(0, 0);
@@ -85,8 +78,14 @@ const Navbar = () => {
               setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`);
             }}>Contact</Link>
           </li>
-
-          <li>Support Us</li>
+          <li>
+            <Link to='/sign-up' onClick={() => {
+              window.scrollTo(0, 0);
+              setMenuHidden(true);
+              setClassName1(`${menuHidden ? 'fade-in' : 'fadeout'}`);
+              setClassName2(`${menuHidden ? 'slide-in-blurred-bottom' : 'slide-out-blurred-bottom'}`);
+            }}>Sign Up</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,18 +1,29 @@
 .contact-banner {
-  background-image: url('../../asset/contact/banner.png');
-  height: 80vh;
+  background-image: url('../../asset/about/banner-11.png');
+  min-height: 600px;
+  height: 50vh;
   margin-top: -5rem;
-  background-size: 125%;
   background-repeat: no-repeat;
-  background-position: 30% 15%;
+  background-size: cover;
+  background-position: 0% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--background);
-  padding: 0 30%;
+  padding: 0 10%;
   text-align: center;
+}
+
+.contact-banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 5%;
 }
 
 .contact-banner h2 {
@@ -42,7 +53,7 @@
   margin: 0.25rem;
 }
 
-form {
+.contact form {
   font-family: 'Noto Sans KR', sans-serif;
   display: flex;
   flex-direction: column;
@@ -68,9 +79,9 @@ label {
   font-weight: 200;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -98,20 +109,10 @@ textarea {
 }
 
 @media (max-width: 768px) { 
-  .contact-banner {
-    background-size: 230%;
-    background-repeat: no-repeat;
-    background-position: 30% 0%;
-  }
+
 }
 
 @media (min-width: 769px) { 
-  .contact-banner {
-    background-size: 150%;
-    background-repeat: no-repeat;
-    background-position: 30% 5%;
-  }
-
   .contact-container {
     padding: 5%;
     display: flex;
@@ -126,13 +127,7 @@ textarea {
 }
 
 @media (min-width: 993px) { 
-  .contact-banner {
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: 30% 15%;
-  }
 
-  
   form {
     max-width: 700px;
   }

@@ -932,7 +932,8 @@
   }
   
   .newsletter-signup button {
-    padding: 3%;
+    width: 7rem;
+    padding: 2%;
   }
 }
 
@@ -941,4 +942,6 @@
     padding: 2% 5%;
     width: 25rem;;
   }
+
+  
 }

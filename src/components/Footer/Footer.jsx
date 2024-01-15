@@ -24,17 +24,15 @@ const Footer = () => {
           <ul>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>HOME</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>ABOUT</Link></li>
-            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>FAQ</Link></li>
-            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>BLOG</Link></li>
+            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Horoscope</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>CONTACT</Link></li>
           </ul>
         </div>
         <div className="footer-section">
-          <h3>The Shop</h3>
+          <h3>Readings</h3>
           <ul>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>SHOP</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>PRIVACY POLICY</Link></li>
-            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>SHIPPING POLICY</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>REFUND POLICY</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>TERMS OF SERVICE</Link></li>
           </ul>

@@ -25,8 +25,10 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className="contact-banner">
-        <h2>Are you ready for your guidance?</h2>
-        <h1>Don't hesitate. Reach out today.</h1>
+        <div className='contact-banner-text'>
+          <h2>Are you ready for your guidance?</h2>
+          <h1>Don't hesitate. Reach out today.</h1>
+        </div>
       </div>
       <div className="contact-container">
         <div className="contact-info">

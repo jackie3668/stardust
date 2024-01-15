@@ -7,78 +7,78 @@
 
 .horoscope-generator {
   padding: 10% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .horoscope-banner {
-  background-image: url('../../asset/horoscope/banner.png');
+  background-image: url('../../asset/about/banner-11.png');
   height: 30vh;
-  background-position: 50% 38%;
-  background-size: 100%;
+  background-position: 0% 60%;
+  background-size: 150%;
   z-index: 0;
 }
 
 .horoscope-day {
-  padding: 5% 20%;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .horoscope-day button {
-  background-color: transparent;
-  color: var(--text);
-  border: 1px solid var(--text);
-  padding: 2%;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  font-weight: 00;
+  padding: 0.5rem 1.5rem;
   width: 30%;
-  border-radius: 40px;
+  border-radius: 1.5rem;
   font-size: 1rem;
-  font-weight: 800;
   cursor: pointer;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.horoscope-day button.active,
-.horoscope-day button:hover {
-  background-color: var(--secondary-accent);
+.horoscope-day button.active {
+  background-color: var(--accent);
   color: var(--primary);
 }
 
 .horoscope-signs {
   width: 100%;
-  padding: 0 10%;
+  max-width: 800px;
+  gap: 1rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .horoscope-signs-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5rem;
-  background-color: var(--background);
-  border-radius: 1.25rem;
-  padding: 2rem;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8) inset;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem; 
 }
 
 .horoscope-signs-buttons button {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0.5rem 2rem;
-  background-color: var(--background);
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  padding: 0.5rem 1.25rem;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  font-size: 0.875rem;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 
-
 .horoscope-signs-buttons button.active {
-  background-color: var(--secondary-accent);
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  background-color: var(--accent); 
+  color: var(--primary);
 }
 
 .horoscope-signs-arrows {

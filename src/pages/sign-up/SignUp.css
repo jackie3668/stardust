@@ -1,0 +1,127 @@
+.sign-up-banner {
+  background-image: url('../../asset/about/banner-11.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0%;
+  height: 100vh;
+  margin-top: -5rem;
+  padding: 20% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sign-up form {
+  background-color: rgba(255,255,255, 0.7);
+  border: none;
+  padding: 10% 7%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+
+.sign-up form p {
+  font-size: 0.875rem;
+  color: rgb(88, 86, 86);
+  font-weight: 400;
+  width: 8rem;
+}
+
+.sign-up form input {
+  background-color: rgba(255,255,255, 0.9);
+  font-size: 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+  padding: 5%;
+  width: 20rem;
+  border: 1px solid rgba(49, 42, 42, 0.2);
+}
+
+.sign-up-verification-input {
+  display: flex;
+}
+
+.sign-up-agree {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+}
+
+.sign-up .ck-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(233, 227, 227, 0.329);
+  border: 1px solid rgba(167, 159, 159, 0.9);
+  cursor: pointer;
+}
+
+.sign-up .ck-box img {
+  width: 0.75rem;
+  opacity: 0.75;
+}
+
+.sign-up i {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.sign-up button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+.sign-up button:hover {
+  background-color: #ecbc58;
+}
+
+@media (max-width: 768px) { 
+
+}
+
+@media (min-width: 769px) { 
+  .sign-up form {
+    margin-top: 5%;
+    padding: 7%;
+  }
+}
+
+@media (min-width: 993px)  { 
+  .sign-up form {
+    margin-top: 5%;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 1201px) { 
+  .sign-up form {
+    margin-top: 5%;
+    padding: 3%;
+  }
+}
