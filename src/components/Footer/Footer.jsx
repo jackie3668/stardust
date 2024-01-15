@@ -24,8 +24,8 @@ const Footer = () => {
           <ul>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>HOME</Link></li>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>ABOUT</Link></li>
-            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Horoscope</Link></li>
-            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>CONTACT</Link></li>
+            <li><Link to="/daily-horoscope" onClick={() => window.scrollTo(0, 0)}>HOROSCOPE</Link></li>
+            <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)}>CONTACT</Link></li>
           </ul>
         </div>
         <div className="footer-section">
